@@ -117,5 +117,19 @@ namespace ProductReviewManagement
             }
 
         }
+        //UC11-Retrieve All Data Records who's Review message contains nice
+        public static void RetrieveAllRecordsWhosReviewMessageContainsNice(List<ProductReview> DataTable)
+        {
+            var result = DataTable.FindAll(x => x.Review.Contains("Nice")).ToList();
+            Console.WriteLine("\nRetrieve All Data Records who's Review message contains nice :");
+            foreach (var dt in result)
+            {
+                Console.WriteLine("\nProduct ID: " + dt.ProductId +
+                                    "\nUser ID: " + dt.UserId +
+                                    "\nRating: " + dt.Rating +
+                                    "\nReview: " + dt.Review +
+                                    "\nIS Liked : " + dt.isLike);
+            }
+        }
     }
 }
