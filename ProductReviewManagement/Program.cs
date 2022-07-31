@@ -95,6 +95,8 @@ namespace ProductReviewManagement
 
             //Retrieve All Data Records who's Review message contains nice
             ProductManagement.RetrieveAllRecordsWhosReviewMessageContainsNice(DataTable);
+            //Retrieve all the records of User ID 10 and Order By Rating
+            ProductManagement.OrderByRating(DataTable);
 
         }
     }

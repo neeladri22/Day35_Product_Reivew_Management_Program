@@ -131,5 +131,21 @@ namespace ProductReviewManagement
                                     "\nIS Liked : " + dt.isLike);
             }
         }
+
+        //UC12-Retrieve all the records of User ID 10 and Order By Rating
+        public static void OrderByRating(List<ProductReview> DataTable)
+        {
+            //var result = (from DT in DataTable orderby DT.Rating descending select DT ).ToList();
+            var result = DataTable.FindAll(x => x.UserId == 10).OrderByDescending(y => y.Rating).ToList();
+            Console.WriteLine("\nRetrieve all the records of User ID 10 and Order By Rating :");
+            foreach (var dt in result)
+            {
+                Console.WriteLine("\nProduct ID: " + dt.ProductId +
+                                    "\nUser ID: " + dt.UserId +
+                                    "\nRating: " + dt.Rating +
+                                    "\nReview: " + dt.Review +
+                                    "\nIS Liked : " + dt.isLike);
+            }
+        }
     }
 }
