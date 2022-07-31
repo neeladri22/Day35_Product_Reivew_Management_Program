@@ -90,5 +90,19 @@ namespace ProductReviewManagement
                                     "\nReview: " + pm.Review);
             }
         }
+        //UC9-Retrieve All Data Records who's IsLike is true
+        public static void RetrieveAllRecordsOfIsLikeValues(List<ProductReview> DataTable)
+        {
+            var result = (from DT in DataTable where DT.isLike == true select DT).ToList();
+            Console.WriteLine("\nRetrieve All Data Records who's IsLike is true :");
+            foreach (var dt in result)
+            {
+                Console.WriteLine("\nProduct ID: " + dt.ProductId +
+                                    "\nUser ID: " + dt.UserId +
+                                    "\nRating: " + dt.Rating +
+                                    "\nReview: " + dt.Review +
+                                    "\nIS Liked : " + dt.isLike);
+            }
+        }
     }
 }

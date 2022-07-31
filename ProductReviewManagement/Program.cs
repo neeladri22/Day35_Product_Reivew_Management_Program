@@ -86,6 +86,9 @@ namespace ProductReviewManagement
                 new ProductReview() { ProductId = 60, UserId = 25, Rating = 3, Review = "Average", isLike = true },
                 new ProductReview() { ProductId = 90, UserId = 19, Rating = 1, Review = "Nice", isLike = true }
             };
+
+            //Retrieve All Data Records who's IsLike is true
+            ProductManagement.RetrieveAllRecordsOfIsLikeValues(DataTable);
         }
     }
     
