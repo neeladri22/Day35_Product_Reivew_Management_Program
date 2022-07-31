@@ -51,6 +51,9 @@ namespace ProductReviewManagement
             //UC5 -Retrieve only Product Id and Review
             ProductManagement.RetrieveOnlyProductIdAndReview(Product);
 
+            //UC6- Skip Top 5 Records from list
+            ProductManagement.SkipTop5Records(Product);
+
 
         }
     }
