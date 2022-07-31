@@ -39,7 +39,7 @@ namespace ProductReviewManagement
 
         }
 
-        //Retrieve count of review present for each Product ID
+        //UC4-Retrieve count of review present for each Product ID
         public static void RetrieveCountofReviewForEachProiductId(List<ProductReview> Product)
         {
             var result = Product.GroupBy(P => P.ProductId).Select(Pi => new { ProductId = Pi.Key, count = Pi.Count() });
@@ -49,6 +49,19 @@ namespace ProductReviewManagement
                 Console.WriteLine("\nProduct ID: " + pm.ProductId +
                                     "\nReview Count : " + pm.count);
             }
+        }
+
+        //UC5-Retrieve only Product Id and Review 
+        public static void RetrieveOnlyProductIdAndReview(List<ProductReview> Product)
+        {
+            var result = (from PM in Product orderby PM.ProductId select PM).ToList();
+            Console.WriteLine("\nRetrieve only Product Id and Review :");
+            foreach (var pm in result)
+            {
+                Console.WriteLine("\nProduct ID: " + pm.ProductId +
+                                    "\nReview : " + pm.Review);
+            }
+
         }
     }
 }
