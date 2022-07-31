@@ -78,5 +78,16 @@ namespace ProductReviewManagement
                                     "\nIS Liked : " + pm.isLike);
             }
         }
+        //UC7-Retrieve only Product ID and Review
+        public static void RetrieveOnlyProductIdandReview(List<ProductReview> Product)
+        {
+            var result = (from PM in Product select PM);
+            Console.WriteLine("\nRetrieve product ID and Review:");
+            foreach (ProductReview pm in result)
+            {
+                Console.WriteLine("\nProduct ID: " + pm.ProductId +
+                                    "\nReview: " + pm.Review);
+            }
+        }
     }
 }
