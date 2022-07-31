@@ -43,6 +43,9 @@ namespace ProductReviewManagement
             //UC2
             ProductManagement.Top3Records(Product);
 
+            //UC3- Retrieve all records who's Rating is Greater that 3 and Product ID is 1 or 4 or 9
+            ProductManagement.RetriveAllRecordWhosRatingGreaterThan3(Product);
+
         }
     }
     
