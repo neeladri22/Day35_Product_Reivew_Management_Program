@@ -8,6 +8,7 @@ namespace ProductReviewManagement
 {
     internal class ProductManagement
     {
+        static List<ProductReview> DataTable;
         //Top 3 Records of High Rating
         public static void Top3Records(List<ProductReview> Product)
         {
